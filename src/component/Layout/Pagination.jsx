@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import ReactPaginate from "react-paginate";
 import ProductItem from "./ProductItem";
+import Flex from "./Flex";
 
 // Example items, to simulate fetching from another resources.
 const items = [
@@ -40,18 +41,34 @@ function Pagination({ itemsPerPage }) {
 
   return (
     <>
-      <div className="flex flex-wrap justify-between gap-y-4">
+      <Flex style="flex flex-wrap justify-between gap-y-4 mb-10">
         <Items currentItems={currentItems} />
-      </div>
-      <ReactPaginate
-        breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={5}
-        pageCount={pageCount}
-        previousLabel="< previous"
-        renderOnZeroPageCount={null}
-      />
+      </Flex>
+      <Flex
+        style={
+          "justify-between items-center  border border-x-0 border-y-[#eee] py-2.5"
+        }
+      >
+        <ReactPaginate
+          breakLabel=""
+          nextLabel="Next"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="Prev"
+          renderOnZeroPageCount={null}
+          nextClassName="page-item"
+          previousClassName="page-item"
+          pageClassName="page-item w-[40px] h-[40px]  flex justify-center items-center rounded"
+          activeClassName="active bg-[#ef4a23]"
+          pageLinkClassName="page-link p-2.5"
+          containerClassName="pagination flex gap-x-1.5 items-center"
+        />
+        <p>
+          {" "}
+          {`Showing ${itemOffset} to ${endOffset} of ${items.length} (${pageCount}Pages)`}
+        </p>
+      </Flex>
     </>
   );
 }

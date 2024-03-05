@@ -7,7 +7,7 @@ function SelectedTable() {
       <form className="w-[100px]">
         <select
           id="countries"
-          className="block w-full  border border-[#F0F0F0] bg-gray-50 p-2.5 !text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 "
+          className="block w-full bg-gray-50 px-2.5 py-1 text-sm text-gray-900 dark:border-gray-600 dark:bg-gray-700 rounded"
         >
           <option
             value={"selected"}

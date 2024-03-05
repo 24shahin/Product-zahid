@@ -14,7 +14,11 @@ const items = [
 ];
 
 function Items({ currentItems }) {
-  return <>{currentItems && currentItems.map((item) => <ProductItem />)}</>;
+  return (
+    <>
+      {currentItems && currentItems.map((item) => <ProductItem key={item} />)}
+    </>
+  );
 }
 
 function Pagination({ itemsPerPage }) {

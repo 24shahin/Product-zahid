@@ -10,7 +10,7 @@ function ProductItem() {
         <div className="w-full p-4 border-b-[3px] border-[#f7f7f7]">
           <img src="../src/assets/product1.webp" alt="" />
         </div>
-        <div className="px-[15px] pt-[15px]">
+        <div className="px-[10px] pt-[15px]">
           <a
             href="#"
             className="hover:text-red-500 text-decoration-solid hover:underline font-semibold text-sm mb-4 inline-block leading-5"

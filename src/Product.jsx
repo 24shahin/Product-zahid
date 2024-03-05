@@ -10,7 +10,7 @@ function Product() {
     SetItemPerPAge(+e.target.value);
   };
   return (
-    <div className="bg-[#f2f4f8]">
+    <div className="bg-[#f2f4f8] pt-4">
       <Container>
         <Flex style={"gap-x-10"}>
           <div className="w-[25%] bg-red-200">shfihsf</div>
